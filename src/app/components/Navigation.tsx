@@ -35,7 +35,7 @@ export default function Navigation() {
               </div>
               <div>
                 <span className="text-xl font-bold">
-                  Ohi's <span className="text-gradient">Makeover</span>
+                  Ohi&apos;s <span className="text-gradient">Makeover</span>
                 </span>
               </div>
             </div>

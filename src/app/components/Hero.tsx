@@ -51,7 +51,7 @@ export default function Hero() {
               </div>
               <div className="overflow-hidden delay-200">
                 <h2 className="text-6xl md:text-8xl font-bold leading-tight reveal text-stroke">
-                  I'M OHI
+                  I&apos;M OHI
                 </h2>
               </div>
               <div className="overflow-hidden delay-300">

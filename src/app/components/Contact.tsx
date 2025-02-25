@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const locations = [
   {

@@ -35,7 +35,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">
-              Ohi's <span className="text-gradient">Makeover</span>
+              Ohi&apos;s <span className="text-gradient">Makeover</span>
             </h3>
             <p className="text-neutral-400 leading-relaxed">
               Transforming beauty through professional artistry and creative
@@ -56,7 +56,7 @@ export default function Footer() {
                 <a
                   key={index}
                   href={link.href}
-                  className="text-neutral-400 hover:text-emerald-500 transition-colors duration-300"
+                  className="text-neutral-400 hover:text-emerald-500 transition-colors"
                 >
                   {link.label}
                 </a>
@@ -107,7 +107,7 @@ export default function Footer() {
         <div className="pt-8 mt-8 border-t border-neutral-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-neutral-400 text-sm text-center md:text-left">
-              © 2024 Ohi's Makeover. All rights reserved.
+              © 2024 Ohi&apos;s Makeover. All rights reserved.
             </p>
             <p className="flex items-center gap-2 text-sm text-neutral-400">
               Made with <Heart className="w-4 h-4 text-emerald-500" /> in

@@ -7,7 +7,7 @@ const reviews = [
     rating: 5,
     image: "/reviews/review-1.jpg",
     review:
-      "Ohi apu is incredibly talented! She did my bridal makeup and I couldn't have been happier. Her attention to detail and understanding of what suits different face types is remarkable.",
+      "Ohi apu is incredibly talented! She did my bridal makeup and I couldn&apos;t have been happier. Her attention to detail and understanding of what suits different face types is remarkable.",
     service: "Bridal Makeup",
   },
   {
@@ -16,7 +16,7 @@ const reviews = [
     rating: 5,
     image: "/reviews/review-2.jpg",
     review:
-      "I've been to many makeup artists, but Ohi's work stands out. She knows exactly how to enhance your natural beauty while keeping the look elegant and fresh.",
+      "I&apos;ve been to many makeup artists, but Ohi&apos;s work stands out. She knows exactly how to enhance your natural beauty while keeping the look elegant and fresh.",
     service: "Party Makeup",
   },
   {
@@ -25,7 +25,7 @@ const reviews = [
     rating: 5,
     image: "/reviews/review-3.jpg",
     review:
-      "Amazing experience! Ohi apu has magic in her hands. She transformed my look for my sister's wedding and everyone was asking about my makeup artist.",
+      "Amazing experience! Ohi apu has magic in her hands. She transformed my look for my sister&apos;s wedding and everyone was asking about my makeup artist.",
     service: "Party Makeup",
   },
   {
@@ -65,8 +65,8 @@ export default function Reviews() {
             Client <span className="text-gradient">Reviews</span>
           </h2>
           <p className="text-xl text-neutral-400 leading-relaxed reveal">
-            Don't just take our word for it. Here's what our beautiful clients
-            have to say about their experience.
+            Don&apos;t just take our word for it. Here&apos;s what our beautiful
+            clients have to say about their experience.
           </p>
         </div>
 
