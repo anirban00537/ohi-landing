@@ -2,20 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-black text-white;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-emerald-500 to-teal-500;
+  }
+}
+
+/* Animated background gradient */
+.animated-gradient {
+  background: linear-gradient(
+    45deg,
+    rgba(16, 185, 129, 0.15),
+    /* emerald-500 */ rgba(20, 184, 166, 0.15),
+    /* teal-500 */ rgba(16, 185, 129, 0.15) /* emerald-500 */
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.glow {
+  filter: drop-shadow(0 0 2em rgba(16, 185, 129, 0.2));
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Text reveal animation */
+@keyframes reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.reveal {
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Shine effect */
+@keyframes shine {
+  from {
+    mask-position: 150%;
+  }
+  to {
+    mask-position: -50%;
+  }
+}
+
+.shine {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    60deg,
+    black 25%,
+    rgba(0, 0, 0, 0.2) 50%,
+    black 75%
+  );
+  mask-size: 400%;
+  animation: shine 8s linear infinite;
+}
+
+/* Custom styles for the space theme */
+.space-dots {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 50px 50px;
 }
