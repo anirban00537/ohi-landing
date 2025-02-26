@@ -1,17 +1,4 @@
-import { Instagram, Facebook, Heart, Users, Star } from "lucide-react";
-
-const socialLinks = [
-  {
-    icon: Instagram,
-    label: "Follow on Instagram",
-    href: "#",
-  },
-  {
-    icon: Facebook,
-    label: "Connect on Facebook",
-    href: "#",
-  },
-];
+import { Heart, Users, Star } from "lucide-react";
 
 const quickLinks = [
   { label: "Home", href: "#home" },
@@ -31,7 +18,7 @@ export default function Footer() {
 
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">
@@ -82,32 +69,13 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* Social Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-bold text-gradient">Connect</h4>
-            <div className="flex flex-col space-y-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="group flex items-center gap-3 text-neutral-400 hover:text-emerald-500 transition-colors duration-300"
-                >
-                  <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <social.icon className="w-4 h-4" />
-                  </div>
-                  <span>{social.label}</span>
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 mt-8 border-t border-neutral-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-neutral-400 text-sm text-center md:text-left">
-              © 2024 Ohi&apos;s Makeover. All rights reserved.
+              © 2025 Ohi&apos;s Makeover. All rights reserved.
             </p>
             <p className="flex items-center gap-2 text-sm text-neutral-400">
               Made with <Heart className="w-4 h-4 text-emerald-500" /> in

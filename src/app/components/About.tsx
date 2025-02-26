@@ -55,7 +55,7 @@ const timeline = [
   {
     title: "Owner",
     organization: "Ohi's makeover and fashion",
-    period: "June 2020 - Present",
+    period: "2017 - Present",
     type: "work",
   },
   {

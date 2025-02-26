@@ -1,7 +1,20 @@
 "use client";
 import Link from "next/link";
-import { Star, Menu, X } from "lucide-react";
+import { Star, Menu, X, Instagram, Facebook } from "lucide-react";
 import { useState } from "react";
+
+const socialLinks = [
+  {
+    icon: Instagram,
+    label: "Follow on Instagram",
+    href: "#",
+  },
+  {
+    icon: Facebook,
+    label: "Connect on Facebook",
+    href: "#",
+  },
+];
 
 const menuItems = [
   { label: "Home", href: "#home" },
@@ -57,16 +70,33 @@ export default function Navigation() {
           </div>
 
           {/* Contact Button */}
-          <a
-            href="mailto:afohi97@gmail.com"
-            className="hidden md:flex items-center gap-2 px-4 py-2 text-sm relative group"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 blur" />
-            <div className="absolute inset-0 bg-black/50 rounded-lg border border-emerald-500/20 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-            <span className="relative text-neutral-400 group-hover:text-emerald-500 transition-colors duration-300">
-              Say hi - afohi97@gmail.com →
-            </span>
-          </a>
+          <div className="hidden md:flex items-center gap-4">
+            <a
+              href="mailto:afohi97@gmail.com"
+              className="flex items-center gap-2 px-4 py-2 text-sm relative group"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg opacity-0 group-hover:opacity-100 transition-all duration-300 blur" />
+              <div className="absolute inset-0 bg-black/50 rounded-lg border border-emerald-500/20 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+              <span className="relative text-neutral-400 group-hover:text-emerald-500 transition-colors duration-300">
+                Say hi - afohi97@gmail.com →
+              </span>
+            </a>
+
+            {/* Social Links - Desktop */}
+            <div className="flex items-center gap-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="group flex items-center text-neutral-400 hover:text-emerald-500 transition-colors duration-300"
+                >
+                  <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <social.icon className="w-4 h-4" />
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -102,6 +132,20 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
+              {/* Social Links - Mobile */}
+              <div className="px-4 py-2 flex gap-4">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className="group flex items-center text-neutral-400 hover:text-emerald-500 transition-colors duration-300"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-emerald-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <social.icon className="w-4 h-4" />
+                    </div>
+                  </a>
+                ))}
+              </div>
               <a
                 href="mailto:afohi97@gmail.com"
                 className="px-4 py-2 text-neutral-400 hover:text-emerald-500 transition-colors duration-300"
