@@ -7,12 +7,12 @@ const socialLinks = [
   {
     icon: Instagram,
     label: "Follow on Instagram",
-    href: "#",
+    href: "https://www.instagram.com/afsanaohi/",
   },
   {
     icon: Facebook,
     label: "Connect on Facebook",
-    href: "#",
+    href: "https://www.facebook.com/sk.ohi.5",
   },
 ];
 
